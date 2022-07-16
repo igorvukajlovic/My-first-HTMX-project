@@ -4,6 +4,10 @@
         <script src="https://unpkg.com/htmx.org@1.7.0" integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode">Load Jokes</div>
+        <div hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode" hx-target='#canvas' hx-trigger='every 8s'>Load Jokes</div>
+    
+        <div id="canvas" style='border: 1px solid black;'>
+
+        </div>
     </body>
 </html>
